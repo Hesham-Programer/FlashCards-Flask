@@ -3,12 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo list app</title>
+    <title>Flash cards app</title>
   </head>
   <body>
     <form action="" method="POST">
-      <h1>Todo-list</h1>
-      <button>Add</button>
+      <h1>Setup</h1>
+      {% for _ in range(cards_number)%}
+        <div>
+          <label for="front">Front:</label>
+          <input type="text" name="front" id="key" value="{{ front }}">
+          <label for="back">Back:</label>
+          <input type="text" name="back" id="value" value="{{ back }}">
+          <hr>
+        </div>
+      {% endfor %}
+      <h1>cards {{cards_number}}</h1>
+      <button name="add" type="submit">Add</button>
+      <button type="submit" name="finish">Finish</button>
     </form>
   </body>
 </html>
