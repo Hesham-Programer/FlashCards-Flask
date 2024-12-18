@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/flashcards.css">    
     <title>Flash cards</title>
+    <script src="index.js"></script>
   </head>
   <body>
-    <form action="" method="POST"></form>
+    <form action="" method="POST">
+      {% for key, value in data.items() %}
+        <li><strong>{{ key }}:</strong>{{ value }}</li>
+      {% endfor %}
+      
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">front</div>
+          <div class="card__face card__face--back">back</div>
+        </div>
+      </div>
+      <p>Click card to flip.</p>
+    </form>
   </body>
 </html>

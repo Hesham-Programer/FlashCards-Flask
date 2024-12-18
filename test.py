@@ -20,4 +20,3 @@ def save(front:str, back:str):
         json.dump(data, data_file, indent=4)
     return True
 
-save("1dsdsddsdsddsdsd", "2dsdsdsdsdsd")
